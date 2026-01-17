@@ -2,138 +2,181 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>MerisuShop | Bricks & Lego</title>
-    <meta name="description" content="MerisuShop – yaratıcı ve eğlenceli bricks lego ürünleri.">
+    <title>Bricks Legolar | Merisu Shop</title>
+    <meta name="description" content="Bricks Legolar kategorisinde en yeni setler. Hepsi 200 TL. Hızlı ve animasyonlu alışveriş.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f5;
-            color: #111;
+            background: linear-gradient(135deg, #1a1a1a, #2b0033);
+            color: #fff;
         }
 
         header {
-            background-color: #000;
-            padding: 16px 32px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 25px;
+            text-align: center;
+            background: #000;
+            border-bottom: 2px solid #ff4fd8;
         }
 
         header h1 {
             margin: 0;
-            font-size: 24px;
-            color: white;
+            color: #ff4fd8;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 22px;
-            font-weight: 600;
+        header p {
+            color: #ccc;
+            margin-top: 5px;
         }
 
-        nav a:hover {
-            color: #7c3aed;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #7c3aed, #a855f7);
-            color: white;
-            padding: 70px 20px;
-            text-align: center;
-        }
-
-        .hero h2 {
-            font-size: 38px;
-            margin-bottom: 12px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            opacity: 0.95;
-        }
-
-        section {
-            padding: 60px 20px;
-            max-width: 1000px;
+        .container {
+            max-width: 1200px;
             margin: auto;
+            padding: 40px 20px;
         }
 
-        section h3 {
-            color: #7c3aed;
-            margin-bottom: 14px;
-            font-size: 26px;
+        .category-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            border-left: 5px solid #b84dff;
+            padding-left: 15px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .product {
+            background: #111;
+            border-radius: 16px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 0 rgba(255, 79, 216, 0);
+        }
+
+        .product:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 0 25px rgba(255, 79, 216, 0.4);
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            margin: 10px 0 5px;
+        }
+
+        .product p {
+            font-size: 14px;
+            color: #bbb;
+        }
+
+        .price {
+            font-size: 20px;
+            margin: 12px 0;
+            color: #ff4fd8;
+            font-weight: bold;
+        }
+
+        .add-cart {
+            background: linear-gradient(135deg, #ff4fd8, #b84dff);
+            border: none;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .add-cart:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(184, 77, 255, 0.8);
+        }
+
+        .add-cart:active {
+            transform: scale(0.95);
         }
 
         footer {
-            background-color: #000;
-            color: #aaa;
             text-align: center;
-            padding: 24px;
-        }
-
-        footer a {
-            color: #a855f7;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
+            padding: 20px;
+            background: #000;
+            margin-top: 40px;
+            color: #777;
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>MerisuShop</h1>
-    <nav>
-        <a href="#anasayfa">Anasayfa</a>
-        <a href="#hakkimizda">Hakkımızda</a>
-        <a href="#urunler">Ürünler</a>
-        <a href="#sepet">Sepet</a>
-        <a href="#iletisim">İletişim</a>
-    </nav>
+    <h1>Merisu Shop</h1>
+    <p>Bricks Legolar Kategorisi</p>
 </header>
 
-<div class="hero" id="anasayfa">
-    <h2>Hayal Gücünü İnşa Et</h2>
-    <p>Bricks & Lego dünyasının modern adresi</p>
+<div class="container">
+    <div class="category-title">🧱 Bricks Legolar</div>
+
+    <div class="products">
+
+        <div class="product">
+            <img src="bricks-set-1.jpg" alt="Bricks Lego Set 1">
+            <h3>Bricks Lego Set 1</h3>
+            <p>Yaratıcılığını konuşturabileceğin özel lego seti.</p>
+            <div class="price">200 TL</div>
+            <button class="add-cart">Sepete Ekle</button>
+        </div>
+
+        <div class="product">
+            <img src="bricks-set-2.jpg" alt="Bricks Lego Set 2">
+            <h3>Bricks Lego Set 2</h3>
+            <p>Detaylı parçalarla eğlenceli bir deneyim.</p>
+            <div class="price">200 TL</div>
+            <button class="add-cart">Sepete Ekle</button>
+        </div>
+
+        <div class="product">
+            <img src="bricks-set-3.jpg" alt="Bricks Lego Set 3">
+            <h3>Bricks Lego Set 3</h3>
+            <p>Hem koleksiyon hem oyun için ideal.</p>
+            <div class="price">200 TL</div>
+            <button class="add-cart">Sepete Ekle</button>
+        </div>
+
+        <div class="product">
+            <img src="bricks-set-4.jpg" alt="Bricks Lego Set 4">
+            <h3>Bricks Lego Set 4</h3>
+            <p>Modern tasarım, maksimum eğlence.</p>
+            <div class="price">200 TL</div>
+            <button class="add-cart">Sepete Ekle</button>
+        </div>
+
+        <div class="product">
+            <img src="bricks-set-5.jpg" alt="Bricks Lego Set 5">
+            <h3>Bricks Lego Set 5</h3>
+            <p>Yüksek kalite parçalarla özel set.</p>
+            <div class="price">200 TL</div>
+            <button class="add-cart">Sepete Ekle</button>
+        </div>
+
+    </div>
 </div>
 
-<section id="hakkimizda">
-    <h3>Hakkımızda</h3>
-    <p>
-        MerisuShop, yaratıcılığı destekleyen modern bricks lego ürünlerini
-        herkes için erişilebilir hale getirmeyi amaçlar.
-    </p>
-</section>
-
-<section id="urunler">
-    <h3>Ürünler</h3>
-    <p>Ürünler çok yakında burada listelenecek.</p>
-</section>
-
-<section id="sepet">
-    <h3>Sepet</h3>
-    <p>Sepetinizde henüz ürün yok.</p>
-</section>
-
-<section id="iletisim">
-    <h3>İletişim</h3>
-    <p>📧 mail@merisushop.com</p>
-    <p>
-        <a href="#">Instagram</a> |
-        <a href="#">TikTok</a> |
-        <a href="#">X</a>
-    </p>
-</section>
-
 <footer>
-    © 2026 MerisuShop
+    © 2026 Merisu Shop — Tüm hakları saklıdır.
 </footer>
 
 </body>
